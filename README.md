@@ -1,9 +1,7 @@
 
 # PRSbils  
 
-<!-- badges: start -->
 
-<!-- badges: end -->
 
 ## Updates  
 
