@@ -13,16 +13,50 @@ Polygenic risk score with bilevel continuous shrinkage for incorporating functio
 
 
 
-## Demo of the Workflow
+## How to use
 
-1. Download PRSbils (this repository) to your local machine
-2. Install required python packages: `pip install -r requirements.txt`
-2. Get the input files ready
-  - LD reference panel
+1. Download/Clone PRSbils (this repository) to your local machine
+2. Install required python packages: `pip3 install -r requirements.txt`
+3. Get the input files ready
+  - Download and extract LD reference panel from 1000 Genomes Project phase 3 (the same procedure as in [PRSCS](https://github.com/getian107/PRScs/blob/master/README.md)):
+    - [African](https://www.dropbox.com/s/mq94h1q9uuhun1h/ldblk_1kg_afr.tar.gz?dl=0 "African")
+    - [American](https://www.dropbox.com/s/uv5ydr4uv528lca/ldblk_1kg_amr.tar.gz?dl=0 "American")
+    - [East Asian](https://www.dropbox.com/s/7ek4lwwf2b7f749/ldblk_1kg_eas.tar.gz?dl=0 "East Asian")
+    - [European](https://www.dropbox.com/s/mt6var0z96vb6fv/ldblk_1kg_eur.tar.gz?dl=0 "European")
+    - [South-eastern Asian]https://www.dropbox.com/s/hsm0qwgyixswdcv/ldblk_1kg_sas.tar.gz?dl=0 "South-eastern Asian"
   - Genotype file
   - GWAS summary statistics
   - Mapping file from SNPs to annotation groups
-3.
+4. Run `PRSbils.py` to get the trained weights for SNPs with different functional annotations.
+
+## Sample command
+
+You can test the program using the following bash command after downloading the 1000G European LD referenfce panel file under the home directory:
+
+```
+pip3 install -r requirements.txt
+
+python3 PRSbils.py \
+        --ref_dir=./1000G/ldblk_1kg_eur \
+        --bim_prefix=./data/genotypes_plink_chr1_train \
+        --sst_file=./data/sumstat.txt \
+        --map_file=./data/snpmap.txt \
+        --n_gwas=50000 \
+        --out_dir=./data/output_trained_weights_prsbils \
+        --chrom=1 \
+        --n_iter=1000 \
+        --thres=1e-04 \
+        --beta_std=False \
+        --flip=True
+
+```
+
+The output file is  `./data/output_trained_weights_prsbils_beta_chr1.txt`, which is a tab-delimited text file with the following columns:
+```
+[Chromosome] [SNP ID] [SNP Position] [Allele 1] [Allele 2] [Weight in the summary statistics file] [Weight from PRSbils] [Annotation Group] [Subgroup (not yet implemented)] [Allele Frequency]
+```
+
+Please check the next section or run `python3 PRSbils.py --help` for details about the parameters.
 
 ## Details about the parameters
 

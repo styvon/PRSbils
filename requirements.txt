@@ -1,8 +1,6 @@
 scipy
 h5py
-gc
 pyplink
 numpy
 sklearn
 statistics
-itertools
