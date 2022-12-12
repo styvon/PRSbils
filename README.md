@@ -2,8 +2,7 @@
 # PRSbils  
 
 <!-- badges: start -->
-![GitHub R package version](https://img.shields.io/github/r-package/v/styvon/TAPE)
-![GitHub R package license](https://img.shields.io/github/license/styvon/TAPE)
+
 <!-- badges: end -->
 
 ## Updates  
