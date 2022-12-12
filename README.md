@@ -13,6 +13,7 @@ Polygenic risk score with bilevel continuous shrinkage for incorporating functio
 
 ## Usage
 
+```
 usage: PRSbils.py [-h] --ref_dir REF_DIR --bim_prefix BIM_PREFIX --sst_file
                   SST_FILE --map_file MAP_FILE [--map_gcol MAP_GCOL] --n_gwas
                   N_GWAS --out_dir OUT_DIR [--a A] [--b B] [--c C] [--d D]
@@ -68,3 +69,4 @@ optional arguments:
   --flip [FLIP]         Boolean. If false, signs of beta in summary statistics
                         will not be flipped when there's a switch in A1 and A2
                         alleles. Default is False
+```
