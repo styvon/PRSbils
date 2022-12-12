@@ -23,7 +23,7 @@ Polygenic risk score with bilevel continuous shrinkage for incorporating functio
     - [American](https://www.dropbox.com/s/uv5ydr4uv528lca/ldblk_1kg_amr.tar.gz?dl=0 "American")
     - [East Asian](https://www.dropbox.com/s/7ek4lwwf2b7f749/ldblk_1kg_eas.tar.gz?dl=0 "East Asian")
     - [European](https://www.dropbox.com/s/mt6var0z96vb6fv/ldblk_1kg_eur.tar.gz?dl=0 "European")
-    - [South-eastern Asian](https://www.dropbox.com/s/hsm0qwgyixswdcv/ldblk_1kg_sas.tar.gz?dl=0 "South-eastern Asian"
+    - [South-eastern Asian](https://www.dropbox.com/s/hsm0qwgyixswdcv/ldblk_1kg_sas.tar.gz?dl=0 "South-eastern Asian")
   - Genotype file
   - GWAS summary statistics
   - Mapping file from SNPs to annotation groups
