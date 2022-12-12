@@ -11,7 +11,20 @@
 
 Polygenic risk score with bilevel continuous shrinkage for incorporating functional annotations.  
 
-## Usage
+
+
+## Demo of the Workflow
+
+1. Download PRSbils (this repository) to your local machine
+2. Install required python packages: `pip install -r requirements.txt`
+2. Get the input files ready
+  - LD reference panel
+  - Genotype file
+  - GWAS summary statistics
+  - Mapping file from SNPs to annotation groups
+3.
+
+## Details about the parameters
 
 ```
 usage: PRSbils.py [-h] --ref_dir REF_DIR --bim_prefix BIM_PREFIX --sst_file
@@ -39,7 +52,7 @@ optional arguments:
   --map_file MAP_FILE   Full path and the file name of the mapping file from
                         SNPs to sets. Map file must have the MSigDB file
                         format : [CHROM] [SNPID] [SETNAME] [GROUP (optional)]
-  --map_gcol MAP_GCOL   Column id for group info in map_file. Default is None
+  --map_gcol MAP_GCOL   (Not yet implemented) Column id for group info in map_file. Default is None
                         (no group information)
   --n_gwas N_GWAS       Sample size of the GWAS
   --out_dir OUT_DIR     Output directory and output filename prefix of the
